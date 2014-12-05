@@ -24,16 +24,16 @@ Class Css {
 		if($this->data === NULL)
 			throw new Exception("No CSS data to save");
 
-        if(session_status() == PHP_SESSION_NONE)
-            session_start();
+		if(session_status() == PHP_SESSION_NONE)
+			session_start();
 
         $_SESSION["CSS_DATA"] = $this->data;
 		return $this;
 	}
 
 	public function load() {
-        if(session_status() == PHP_SESSION_NONE)
-            session_start();
+		if(session_status() == PHP_SESSION_NONE)
+			session_start();
 
 		$this->data = $_SESSION["CSS_DATA"];
 		return $this;
