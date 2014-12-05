@@ -4,13 +4,13 @@ This class will load css files given in order to create one single css file serv
 
 Example:
 index.php
-```
-<?
+```php
 $css = new Css();
 $css->add("path/to/css/file.css");
 $css->compile();
 $css->save();
-?>
+```
+```html
 <html>
 <head>
 	<link href="css.php" />
@@ -19,9 +19,7 @@ $css->save();
 ```
 
 css.php
-```
-<?
+```php
 $css = new Css();
 $css->dump();
-?>
 ```
